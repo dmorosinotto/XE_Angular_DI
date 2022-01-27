@@ -1,9 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: "root"
 })
 export class LibService {
-
-  constructor() { }
+	public rnd = Math.random();
+	constructor() {
+		console.count(`Created ${(this as Object).constructor.name}, rnd=${this.rnd}`);
+	}
 }

@@ -4,7 +4,9 @@ theme: white
 
 # XE Angular DI
 
-Daniele Morosinotto
+## Sei veramente sicuro di conoscerla!?
+
+**Daniele Morosinotto**
 [@dmorosinotto](https://twitter.com/dmorosinotto)
 
 XE.NET Online Session 28/01/2022 -
@@ -13,8 +15,6 @@ Repo: [https://github.com/dmorosinotto/XE_Angular_DI](https://github.com/dmorosi
 --
 
 # AGENDA
-
-**Angular DI - sei veramente sicuro di conoscerla!?**
 
 -   Intro - Quiz: Cos'è la DI? E perche la usiamo!?
 -   Le Basi: definizioni di Providers, Injector, Token...

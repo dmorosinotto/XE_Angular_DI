@@ -26,7 +26,7 @@ Repo: [https://github.com/dmorosinotto/XE_Angular_DI](https://github.com/dmorosi
 
 # Intro
 
-## Partiamo con un [Quiz](https://play.kahoot.it/v2/?quizId=8a4583b2-637d-447c-9889-457f99198e1a)
+## Partiamo con un [Quiz](intro.md)
 
 ---
 
@@ -90,7 +90,7 @@ const Token = new InjectionToken<T>("ANSWER", options);
 
 ## Dove mettiamo i Providers?
 
--   Direttamente sulle classi dei Serivizi _([tree-shakable](https://angular.io/api/core/Injectable#providedin))_ `@Injectable({providedIn: "root" | "any" | Type<Module>}) class Service`
+-   Direttamente sulle classi dei Servizi _([tree-shakable](https://angular.io/api/core/Injectable#providedin))_ `@Injectable({providedIn: "root" | "any" | Type<Module>}) class Service`
 -   Negli array **providers** legati al
     -   scope [modulo](https://angular.io/guide/ngmodule-faq#why-is-a-service-provided-in-a-feature-module-visible-everywhere) `@NgModule.providers=[..]`
     -   scope [locale](https://angular.io/guide/dependency-injection-in-action#multiple-service-instances-sandboxing) `@Directive.providers / @Component({viewProviders:[...]})`

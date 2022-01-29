@@ -1,5 +1,6 @@
 ---
 theme: white
+[Quiz Online](https://play.kahoot.it/v2/?quizId=8a4583b2-637d-447c-9889-457f99198e1a)
 ---
 
 ## D: Conosci Angular? da quanto tempo lo usi?

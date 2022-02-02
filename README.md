@@ -2,6 +2,10 @@
 
 XE Angular DI - Session 28-01-2022
 
+-   Intro [Quiz](intro.md)
+-   My [Slides](slides.md) in 🇮🇹
+-   Online [Stackblitz](https://stackblitz.com/edit/angular-ivy-di-experiments-ujumaw?devtoolsheight=33&file=src/app/dirs/t.component.ts)
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+
+body {
+    font-family: Lato, Verdana, Arial;
+  }
+
+  aside {
+    border: 1px solid var(--border, black);
+    margin: 2px;
+  }
+
+  div {
+    padding: 5px;
+    background-color: var(--color, white);
+    color: black;
+  }
+  

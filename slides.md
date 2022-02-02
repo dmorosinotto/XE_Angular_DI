@@ -130,9 +130,9 @@ Ogni componente ha un suo [ElementInjector](https://angular.io/guide/hierarchica
 
 # DEMOS
 
-Online [Stackblitz](https://stackblitz.com/edit/angular-ivy-di-experiments-ujumaw?devtoolsheight=33&file=src/app/dirs/t.component.ts)
-
---
+-   Sample [Providers](projects/app/src/app/providers/providers.service.ts) + use [Token](projects/app/src/app/providers/use-token.component.ts)
+-   Online [Stackblitz](https://stackblitz.com/edit/angular-ivy-di-experiments-ujumaw?devtoolsheight=33&file=src/app/dirs/t.component.ts) - [Ovverride rule](projects/app/src/app/app.module.ts) - [Component tree](projects/app/src/app/comps) - [@Comp + @Dir](projects/app/src/app/dirs) Providers - [Context Service](https://gist.github.com/dmorosinotto/06545ed9e543adf196a5963a88448eeb)
+    --
 
 ## TIPS & REFERENCE
 

@@ -1,4 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, Inject, Optional, VERSION } from "@angular/core";
+import { CoreService } from "./services/CoreService";
+import { SubService } from "./services/SubService";
+import { IService, TOKEN } from "./services/token";
 import { LibService } from "lib";
 
 @Component({
@@ -20,12 +23,47 @@ import { LibService } from "lib";
 			<a routerLink="about">About</a> | <a routerLink="prov">Providers</a>
 		</nav>
 		<router-outlet></router-outlet>
+
+		<aside class="main">
+			<p>
+				Edit <code>app.module.ts</code> to experiment with DI providers and then check message in Console for
+				service use!
+				<button (click)="greet()">Greet</button>
+			</p>
+			<hr />
+			<n-cmp><c-cmp color="white"></c-cmp></n-cmp>
+			<w-cmp w-dir [color]="'green'" (evt)="show($event)"></w-cmp>
+			<!-- <t-cmp color="cyan" (evt)="show($event)"></t-cmp> -->
+			<!-- <ui-cmp color="yellow" (evt)="show($event)"></ui-cmp> -->
+		</aside>
 	`,
-	styles: []
+	styles: [".main { color: red }"]
 })
 export class AppComponent {
-	title = "XE Angular DI";
-	constructor(public lib: LibService) {
-		console.log("APP CTOR ->", lib.rnd);
+	title = "XE Angular DI " + VERSION.major;
+
+	//constructor(@Inject(TOKEN) private svc: IService , @Inject(CoreService) core: SubService) {
+	constructor(
+		@Inject(TOKEN) private svc: IService,
+		core: CoreService /*SubService*/,
+		@Optional() public lib: LibService
+	) {
+		console.log(
+			`AppComponent TOKEN -> ${svc.getMsg()} \n CORE => ${core.getMsg()} INSTANCEOF ${core.constructor.name}`
+		);
+		console.log("SUBX", (core as any)?.SUBX ?? "NO SUBSERVICE!");
+	}
+
+	// constructor(@Inject(TOKEN) private svc: IService, public lib: LibService) {
+	//   console.log(`AppComponent TOKEN -> ${svc.rnd} ${svc.getMsg()}`);
+	//   console.log("APP CTOR ->", lib.rnd);
+	// }
+
+	greet() {
+		alert(this.svc.getMsg());
+	}
+
+	show(e: any) {
+		alert(e);
 	}
 }

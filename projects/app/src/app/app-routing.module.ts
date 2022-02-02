@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LibComponent, LibModule } from "lib";
 import { PageLoginComponent } from "./page-login/page-login.component";
-import { UseTokenComponent, UseTokenModule } from "./use-token/use-token.component";
+import { UseTokenComponent, UseTokenModule } from "./providers/use-token.component";
 
 const routes: Routes = [
 	{ path: "prov", component: UseTokenComponent },

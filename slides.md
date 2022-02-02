@@ -130,6 +130,8 @@ Ogni componente ha un suo [ElementInjector](https://angular.io/guide/hierarchica
 
 # DEMOS
 
+Online [Stackblitz](https://stackblitz.com/edit/angular-ivy-di-experiments-ujumaw?devtoolsheight=33&file=src/app/dirs/t.component.ts)
+
 --
 
 ## TIPS & REFERENCE

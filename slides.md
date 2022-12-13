@@ -62,7 +62,7 @@ Provider = Regola per la **creazione istanza** del Servizio
 -   [Esplicita](https://angular.io/api/core/ClassProvider): `{provide: ServiceClass, useClass: ServiceClass}`
 -   [Alias](https://angular.io/api/core/ExistingProvider): `{provide: ServiceClass, useExisting: Token}`
 -   [Valore](https://angular.io/api/core/ValueProvider): `{provide: Token, useValue: XXX}`
--   [Funzione](https://angular.io/api/core/FactoryProvider): `{provide: Token, useFactory: (par)=>new XYZ(p), deps:[TokenPar]}`
+-   [Funzione](https://angular.io/api/core/FactoryProvider): `{provide: Token, useFactory: (par)=>new XYZ(par), deps:[TokenPar]}`
 
 --
 

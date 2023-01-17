@@ -142,6 +142,7 @@ Semplificatevi la vita:
 
 -   usate **`{providedIn: "root"}`** solo per i **singleton** che ha senso _tenere vivi per_ l' **intera applicazione**! _(es: AppConfig / Login / Notification)_
 -   usate i **`ContainerProvider`** per tutto il resto! Così il contesto dei Servizi === l'albero componenti, sarà più semplice **isolarli/riutilizzarli** e più facile capire lo **scope** dei Servizi + potrete **deallocarli**!
+-   nuovi [pattern DI](https://www.angulararchitects.io/en/aktuelles/patterns-for-custom-standalone-apis-in-angular/?mc_cid=dcfc4a34f9&mc_eid=bca811da1f) introdotti con la nuova _inject_ function in Angular v14+
 
 Se volete veramente _"vedere quanto è profonda la tana del Bianconiglio"_ leggete questo [articolo](https://indepth.dev/posts/1261/what-you-always-wanted-to-know-about-angular-dependency-injection-tree)
 

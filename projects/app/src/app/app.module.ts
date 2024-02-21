@@ -25,33 +25,33 @@ import { DDirective } from "./extra/d.directive";
 import { UIComponent } from "./extra/ui.component";
 
 @NgModule({
-	imports: [
-		BrowserModule,
-		// RootModule,
-		// NewModule,
-		// CustModule,
-		// SubModule,
-		AppRoutingModule
-	],
-	declarations: [
-		AppComponent,
-		NComponent,
-		PComponent,
-		CComponent,
-		WComponent,
-		WDirective,
-		TComponent,
-		BDirective,
-		DDirective,
-		UIComponent
-	],
-	bootstrap: [AppComponent],
-	providers: [
-		{ provide: "VService", useValue: { rnd: 123, name: "I WIN" } }
-		// provideRoot,
-		// providerNew,
-		// provideFact,
-		// providerCust
-	]
+  imports: [
+    BrowserModule,
+    // RootModule,
+    // NewModule,
+    // CustModule,
+    // SubModule,
+    // AppRoutingModule,
+  ],
+  declarations: [
+    AppComponent,
+    NComponent,
+    PComponent,
+    CComponent,
+    WComponent,
+    WDirective,
+    TComponent,
+    BDirective,
+    DDirective,
+    UIComponent,
+  ],
+  bootstrap: [AppComponent],
+  providers: [
+    { provide: "VService", useValue: { rnd: 123, name: "I WIN" } },
+    // provideRoot,
+    // providerNew,
+    // provideFact,
+    // providerCust,
+  ],
 })
 export class AppModule {}

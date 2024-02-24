@@ -1,8 +1,9 @@
 import { Component, Inject, Optional, VERSION } from "@angular/core";
 import { CoreService } from "./services/CoreService";
-import { SubService } from "./services/SubService";
+import { SubService, isSub } from "./services/SubService";
 import { IService, TOKEN } from "./services/token";
 import { LibService } from "lib";
+import { CustService } from "./services/CustService";
 
 @Component({
   selector: "app-root",
@@ -12,8 +13,8 @@ import { LibService } from "lib";
       <h1>Welcome to {{ title }}!</h1>
       <span style="display: block">{{ lib.rnd }} app is running!</span>
     </div>
-
-    <!-- <nav>
+    <lib-comp></lib-comp>
+    <nav>
       <a routerLink="lib">Lib</a> | <a routerLink="prov">Providers</a> |
       <a routerLink="login">Login</a> | <a routerLink="about">About</a> |
       <a routerLink="lazy">Lazy</a> |
@@ -21,7 +22,7 @@ import { LibService } from "lib";
       <a routerLink="lazy/with/42">Lazy 42</a> |
       <a routerLink="lazy/invalid">Lazy INVALID</a> |
     </nav>
-    <router-outlet></router-outlet> -->
+    <router-outlet></router-outlet>
 
     <aside class="main">
       <p>
@@ -30,7 +31,10 @@ import { LibService } from "lib";
         <button (click)="greet()">Greet</button>
       </p>
       <hr />
-      <!-- <n-cmp><c-cmp color="white"></c-cmp></n-cmp> -->
+      <n-cmp>
+        <h1>ciao</h1>
+        <c-cmp color="white"></c-cmp>
+      </n-cmp>
       <!-- <w-cmp w-dir [color]="'green'" (evt)="show($event)"></w-cmp> -->
     </aside>
   `, // <t-cmp color="cyan" (evt)="show($event)"></t-cmp> <ui-cmp color="yellow" (evt)="show($event)"></ui-cmp>
@@ -43,13 +47,18 @@ export class AppComponent {
   constructor(
     @Inject(TOKEN) private svc: IService,
     core: CoreService /*SubService*/,
-    @Optional() public lib: LibService
+    @Optional() cust: CustService | null,
+    public lib: LibService
   ) {
     console.log(
       `AppComponent TOKEN -> ${svc.getMsg()} 
 	   CORE => ${core.getMsg()} INSTANCEOF ${core.constructor.name}`
     );
+    if (isSub(core)) {
+      console.warn("SUBX", core.SUBX);
+    }
     console.log("SUBX", (core as any)?.SUBX ?? "NO SUBSERVICE!");
+    console.warn("CUSTOM", cust?.rnd);
   }
 
   // constructor(@Inject(TOKEN) private svc: IService, public lib: LibService) {

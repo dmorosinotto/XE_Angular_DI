@@ -3,14 +3,17 @@ import { CoreService } from "./CoreService";
 
 @Injectable()
 export class CustService extends CoreService {
-	constructor() {
-		super();
-		console.log("Create CustService", this.rnd);
-	}
+  constructor() {
+    super();
+    console.log("Create CustService", this.rnd);
+  }
 
-	public override getMsg() {
-		return `Hello from CustService ${this.rnd}`;
-	}
+  public override getMsg() {
+    return `Hello from CustService ${this.rnd}`;
+  }
 }
 
-export const providerCust: ClassProvider = { provide: CoreService, useClass: CustService };
+export const providerCust = [
+  CustService,
+  { provide: CoreService, useExisting: CustService },
+];

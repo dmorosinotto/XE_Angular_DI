@@ -23,21 +23,23 @@ import { TComponent } from "./extra/t.component";
 import { BDirective } from "./extra/b.directive";
 import { DDirective } from "./extra/d.directive";
 import { UIComponent } from "./extra/ui.component";
+import { LibModule } from "lib";
+
+const COMPS = [NComponent, PComponent, CComponent];
 
 @NgModule({
   imports: [
     BrowserModule,
-    // RootModule,
-    // NewModule,
+    LibModule,
+    NewModule,
+    RootModule,
     // CustModule,
-    // SubModule,
-    // AppRoutingModule,
+    SubModule,
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
-    NComponent,
-    PComponent,
-    CComponent,
+    ...COMPS,
     WComponent,
     WDirective,
     TComponent,
